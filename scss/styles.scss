@@ -1,0 +1,72 @@
+// Primary Colors
+
+$Marine-blue: hsl(213, 96%, 18%);
+$Purplish-blue: hsl(243, 100%, 62%);
+$Pastel-blue: hsl(228, 100%, 84%);
+$Light-blue: hsl(206, 94%, 87%);
+$Strawberry-red: hsl(354, 84%, 57%);
+
+:root {
+    font-size: 24px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+    body {
+            background-color: $Light-blue;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            
+            .bg-mobile {
+                position: absolute;
+            }
+
+            .header {
+                width: 100%;
+                z-index: 2;
+                padding: 50px;
+
+                .btn-group {
+                    width: 60vw;
+                    height: 50%;
+                    gap: 15px;
+
+                    button {
+                        height: 35px;
+                        width: 35px;
+                        border-radius: 50%;
+                        color: white;
+                        border: white solid 1px;
+                        background-color: transparent;
+                    }   
+                }
+            }
+    
+            .card {
+                width: 320px;
+                height: 60vh;
+                border-radius: 10px;
+                background-color: white;
+                z-index: 3;
+            }
+    
+            .footer {
+                margin-top: 12vh;
+                height: 12vh;
+                width: 100%;
+                background-color: white;
+            }
+    }
