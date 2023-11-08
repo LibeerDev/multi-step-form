@@ -1,5 +1,21 @@
+@font-face {
+  font-family: "Ubuntu-Bold";
+  src: url(../assets/fonts/Ubuntu-Bold.ttf);
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Ubuntu-Medium";
+  src: url(../assets/fonts/Ubuntu-Medium.ttf);
+  font-weight: 600;
+}
+@font-face {
+  font-family: "Ubuntu-Regular";
+  src: url(../assets/fonts/Ubuntu-Regular.ttf);
+  font-weight: 400;
+}
 :root {
   font-size: 24px;
+  font-family: "Ubuntu-Regular", sans-serif;
 }
 
 * {
@@ -14,16 +30,18 @@
   align-items: center;
 }
 
+.bg-mobile {
+  position: absolute;
+}
+
 body {
+  overflow: hidden;
   background-color: hsl(206, 94%, 87%);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-}
-body .bg-mobile {
-  position: absolute;
 }
 body .header {
   width: 100%;
@@ -42,13 +60,34 @@ body .header .btn-group button {
   color: white;
   border: white solid 1px;
   background-color: transparent;
+  font-family: "Ubuntu-Bold";
+}
+body .header .btn-group .selected {
+  background-color: hsl(228, 100%, 84%);
+  color: black;
+  border: none;
 }
 body .card {
-  width: 320px;
+  width: 90vw;
   height: 60vh;
   border-radius: 10px;
   background-color: white;
   z-index: 3;
+  padding: 20px;
+  padding-top: 30px;
+}
+body .card .personal-info {
+  line-height: 1.7;
+}
+body .card .personal-info h1 {
+  font-family: "Ubuntu-Bold";
+  font-weight: 700;
+  color: hsl(213, 96%, 18%);
+  margin-bottom: 0.3rem;
+}
+body .card .personal-info h2 {
+  font-size: 0.7rem;
+  color: grey;
 }
 body .footer {
   margin-top: 12vh;
