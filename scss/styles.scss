@@ -54,8 +54,13 @@ $White: hsl(0, 0%, 100%);
     align-items: center;
 }
 
+.hidden {
+    display: none;
+}
+
 .bg-mobile {
     position: absolute;
+    width: 100vw;
 }
 
 body {
@@ -115,12 +120,12 @@ body {
             }
 
             h2 {
-                font-size: 0.7rem;
+                font-size: 0.65rem;
                 color: grey;
                 margin-bottom: 0.6rem;
             }
 
-            .personal-info__form {
+            .personal-info__form fieldset {
                 display: flex;
                 flex-direction: column;
                 font-size: 0.5rem;

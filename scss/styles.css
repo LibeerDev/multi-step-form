@@ -31,8 +31,13 @@
   align-items: center;
 }
 
+.hidden {
+  display: none;
+}
+
 .bg-mobile {
   position: absolute;
+  width: 100vw;
 }
 
 body {
@@ -86,26 +91,26 @@ body .card .personal-info h1 {
   margin-bottom: 0.3rem;
 }
 body .card .personal-info h2 {
-  font-size: 0.7rem;
+  font-size: 0.65rem;
   color: grey;
   margin-bottom: 0.6rem;
 }
-body .card .personal-info .personal-info__form {
+body .card .personal-info .personal-info__form fieldset {
   display: flex;
   flex-direction: column;
   font-size: 0.5rem;
   font-family: "Ubuntu-Medium", sans-serif;
 }
-body .card .personal-info .personal-info__form input {
+body .card .personal-info .personal-info__form fieldset input {
   font-family: "Ubuntu-bold";
   padding: 12px;
   border: hsl(229, 24%, 87%) 1px solid;
   border-radius: 4px;
 }
-body .card .personal-info .personal-info__form input::-moz-placeholder {
+body .card .personal-info .personal-info__form fieldset input::-moz-placeholder {
   color: hsl(231, 11%, 63%);
 }
-body .card .personal-info .personal-info__form input::placeholder {
+body .card .personal-info .personal-info__form fieldset input::placeholder {
   color: hsl(231, 11%, 63%);
 }
 body .footer {
