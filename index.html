@@ -28,16 +28,16 @@
   <img src="assets/images/bg-sidebar-mobile.svg" alt="" class="bg-mobile">
   <div class="header center">
     <div class="btn-group center">
-      <button class="step1 selected">1</button>
-      <button class="step2">2</button>
-      <button class="step3">3</button>
-      <button class="step4">4</button>
+      <button onclick="goToStep(0)" class="step-btn selected">1</button>
+      <button onclick="goToStep(1)" class="step-btn">2</button>
+      <button onclick="goToStep(2)" class="step-btn">3</button>
+      <button onclick="goToStep(3)" class="step-btn">4</button>
     </div>
   </div>
     <div class="card">
-      <div class="personal-info">
-        <h1>Personal info</h1>
-        <h2>Please provide your name, email adress, and phone number.</h2>
+      <div class="personal-info" id="step0">
+        <h1 class="heading1">Personal info</h1>
+        <h2 class="subheading">Please provide your name, email adress, and phone number.</h2>
 
         <form action="" class="personal-info__form">
           <fieldset>
@@ -53,12 +53,42 @@
           </fieldset>
         </form>
       </div>
+      <div class="billing hidden" id="step1">
+        <h1 class="heading1">Select your plan</h1>
+        <h2 class="subheading">You have the option of monthly or yearly billing.</h2>
+
+        <div class="billing__button-group">
+          <button class="billing-selection-btn" id="choiceArcade"></button>
+          <button class="billing-selection-btn" id="choiceAdvanced"></button>
+          <button class="billing-selection-btn" id="choicePro"></button>
+          <div class="billing__switch billing-selection-btn">
+            <p>Monthly</p>
+
+            <button class="billing-selection-switch" id="switchMonthYear">
+                  <div class="switch-state-indicator"></div>
+            </button>
+
+            <p>Yearly</p>
+        </div>
+
+      </div>
+
+      <div class="addons hidden" id="step2">
+
+      </div>
+
+      <div class="finishing-up hidden" id="step3">
+
+      </div>
+      
     </div>
     <div class="footer">
-      <button class="next-step-btn">
+      <button onclick="nextStep()" class="next-step-btn">
         Next Step
       </button>
     </div>
+
+    <script src="js/form.js"></script>
 </body>
 
 </html>

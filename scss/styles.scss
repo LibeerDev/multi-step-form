@@ -34,12 +34,26 @@ $White: hsl(0, 0%, 100%);
     font-weight: 400;
 }
 
-// Styling
+// Styling pattern 
+
+.heading1 {
+    font-family: 'Ubuntu-Bold';
+    font-weight: 700;
+    margin-bottom: 0.3rem;
+}
+
+.subheading {
+    font-size: 0.65rem;
+    color: grey;
+    margin-bottom: 0.6rem;
+}
+
+// Nested styling
 
 :root {
     font-size: 24px;
     font-family: 'Ubuntu-Regular', sans-serif;
-    color: $Marine-blue;    
+    color: $Marine-blue;
 }
 
 * {
@@ -101,6 +115,89 @@ body {
         }
     }
 
+    // Steps (personal info, billing...)
+
+    .personal-info {
+
+        line-height: 1.7;
+
+        .personal-info__form fieldset {
+            display: flex;
+            flex-direction: column;
+            font-size: 0.5rem;
+            font-family: 'Ubuntu-Medium', sans-serif;
+
+            input {
+                font-family: 'Ubuntu-bold';
+                padding: 12px;
+                border: $Light-gray 1px solid;
+                border-radius: 4px;
+            }
+
+            input::placeholder {
+                color: $Cool-gray;
+            }
+        }
+    }
+
+    .billing {
+
+        .billing__button-group {
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 10px;
+
+            .billing-selection-btn {
+                height: 65px;
+                width: 95%;
+                background-color: transparent;
+                border: 1px solid $Light-gray;
+                border-radius: 10px;
+            }
+
+            .billing__switch {
+                display: flex;
+                gap: 15px;
+                background-color: $Light-gray;
+                width: 95%;
+                height: 40px;
+                align-items: center;
+                justify-content: center;
+                border-radius: 12px;
+                font-size: 0.7rem;
+
+                .billing-selection-switch {
+                    height: 20px;
+                    width: 35px;
+                    background-color: $Marine-blue;
+                    border: none;
+                    border-radius: 12px;
+
+                    .switch-state-indicator {
+                        width: 12px;
+                        height: 12px;
+                        margin-left: 3px;
+                        z-index: 999;
+                        border-radius: 50%;
+                        background-color: white;
+                    }
+
+                }
+
+
+            }
+            
+        }
+
+    
+    }
+
+
+    // Element styling
+
     .card {
         width: 90vw;
         border-radius: 10px;
@@ -109,41 +206,6 @@ body {
         margin-bottom: auto;
         padding: 20px;
         padding-top: 30px;
-
-        .personal-info {
-
-            line-height: 1.7;
-            h1 {
-                font-family: 'Ubuntu-Bold';
-                font-weight: 700;
-                margin-bottom: 0.3rem;
-            }
-
-            h2 {
-                font-size: 0.65rem;
-                color: grey;
-                margin-bottom: 0.6rem;
-            }
-
-            .personal-info__form fieldset {
-                display: flex;
-                flex-direction: column;
-                font-size: 0.5rem;
-                font-family: 'Ubuntu-Medium', sans-serif;
-
-                input {
-                    font-family: 'Ubuntu-bold';
-                    padding: 12px;
-                    border: $Light-gray 1px solid;
-                    border-radius: 4px;
-                }
-
-                input::placeholder {
-                    color: $Cool-gray;
-                }
-            }
-        }
-
     }
 
     .footer {
