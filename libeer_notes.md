@@ -4,4 +4,4 @@ Real time spent: 4 hours
 
 JavaScript: 1 hours;
 Step1: Personal info front-end: 3 hours
-Step 2: 
+Step2: Billing front-end: 2 hours

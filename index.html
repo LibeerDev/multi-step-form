@@ -34,41 +34,63 @@
       <button onclick="goToStep(3)" class="step-btn">4</button>
     </div>
   </div>
-    <div class="card">
-      <div class="personal-info" id="step0">
-        <h1 class="heading1">Personal info</h1>
-        <h2 class="subheading">Please provide your name, email adress, and phone number.</h2>
+  <div class="card">
+    <div class="personal-info" id="step0">
+      <h1 class="heading1">Personal info</h1>
+      <h2 class="subheading">Please provide your name, email adress, and phone number.</h2>
 
-        <form action="" class="personal-info__form">
-          <fieldset>
-            <legend class="hidden">
-              Your information
-            </legend>
-              <label for="name">Name</label>
-              <input placeholder="e.g. Stephen King" type="text" name="name" id="name">
-              <label for="email">Email Adress</label>
-              <input type="email" placeholder="e.g. stephenking@lorem.com" name="email adress" id="emailAdress">
-              <label for="email">Phone Number</label>
-              <input type="text" placeholder="e.g. +1 234 567 890" name="phone number" id="phoneNumber">
-          </fieldset>
-        </form>
-      </div>
-      <div class="billing hidden" id="step1">
-        <h1 class="heading1">Select your plan</h1>
-        <h2 class="subheading">You have the option of monthly or yearly billing.</h2>
+      <form action="" class="personal-info__form">
+        <fieldset>
+          <legend class="hidden">
+            Your information
+          </legend>
+          <label for="name">Name</label>
+          <input placeholder="e.g. Stephen King" type="text" name="name" id="name">
+          <label for="email">Email Adress</label>
+          <input type="email" placeholder="e.g. stephenking@lorem.com" name="email adress" id="emailAdress">
+          <label for="email">Phone Number</label>
+          <input type="text" placeholder="e.g. +1 234 567 890" name="phone number" id="phoneNumber">
+        </fieldset>
+      </form>
+    </div>
+    <div class="billing hidden" id="step1">
+      <h1 class="heading1">Select your plan</h1>
+      <h2 class="subheading">You have the option of monthly or yearly billing.</h2>
 
-        <div class="billing__button-group">
-          <button class="billing-selection-btn" id="choiceArcade"></button>
-          <button class="billing-selection-btn" id="choiceAdvanced"></button>
-          <button class="billing-selection-btn" id="choicePro"></button>
-          <div class="billing__switch billing-selection-btn">
-            <p>Monthly</p>
+      <div class="billing__button-group">
+        
+        <button onclick="selectButton('choiceArcade')" class="billing-selection-btn" id="choiceArcade">
+          <img src="./assets/images/icon-arcade.svg" width="40px" id="arcadeImg">
+          <div class="text">
+            <h1 class="heading1">Arcade</h1>
+            <h2 class="subheading">9$/mo</h2>
+          </div>
+        </button>
 
-            <button class="billing-selection-switch" id="switchMonthYear">
-                  <div class="switch-state-indicator"></div>
-            </button>
+        <button onclick="selectButton('choiceAdvanced')" class="billing-selection-btn" id="choiceAdvanced">
+          <img src="./assets/images/icon-advanced.svg" width="40px" id="arcadeImg">
+          <div class="text">
+            <h1 class="heading1">Advanced</h1>
+            <h2 class="subheading">12$/mo</h2>
+          </div>
+        </button>
 
-            <p>Yearly</p>
+        <button onclick="selectButton('choicePro')" class="billing-selection-btn" id="choicePro">
+          <img src="./assets/images/icon-pro.svg" width="40px" id="arcadeImg">
+          <div class="text">
+            <h1 class="heading1">Pro</h1>
+            <h2 class="subheading">15$/mo</h2>
+          </div>
+        </button>
+
+        <div class="billing__switch">
+          <p>Monthly</p>
+
+          <button class="billing-selection-switch" id="switchMonthYear">
+            <div class="switch-state-indicator"></div>
+          </button>
+
+          <p>Yearly</p>
         </div>
 
       </div>
@@ -80,16 +102,16 @@
       <div class="finishing-up hidden" id="step3">
 
       </div>
-      
-    </div>
-    </div>
-    <div class="footer">
-      <button onclick="nextStep()" class="next-step-btn">
-        Next Step
-      </button>
-    </div>
 
-    <script src="js/form.js"></script>
+    </div>
+  </div>
+  <div class="footer">
+    <button onclick="nextStep()" class="next-step-btn">
+      Next Step
+    </button>
+  </div>
+
+  <script src="js/form.js"></script>
 </body>
 
 </html>

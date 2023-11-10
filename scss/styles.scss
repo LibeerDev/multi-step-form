@@ -106,12 +106,6 @@ body {
                 font-family: 'Ubuntu-Bold';
             }
 
-
-            .selected {
-                background-color: $Light-blue;
-                color: black;
-                border: none;
-            }
         }
     }
 
@@ -128,7 +122,7 @@ body {
             font-family: 'Ubuntu-Medium', sans-serif;
 
             input {
-                font-family: 'Ubuntu-bold';
+                font-family: 'Ubuntu-Bold';
                 padding: 12px;
                 border: $Light-gray 1px solid;
                 border-radius: 4px;
@@ -150,13 +144,35 @@ body {
             flex-direction: column;
             gap: 10px;
 
+            }
+
             .billing-selection-btn {
                 height: 65px;
                 width: 95%;
                 background-color: transparent;
                 border: 1px solid $Light-gray;
                 border-radius: 10px;
+                display: flex;
+                align-items: center;
+
+                .selected {
+                    border: 1px $Marine-blue;
+                }    
+
             }
+
+            img {
+                margin: 10px;
+            }
+
+            .text {
+                display: flex;
+                flex-direction: column;
+                text-align: left;
+                margin-top: 10px;
+            }
+
+
 
             .billing__switch {
                 display: flex;
@@ -189,9 +205,8 @@ body {
 
 
             }
-            
+        
         }
-
     
     }
 
@@ -230,4 +245,3 @@ body {
             color: white;
         }
     }
-}

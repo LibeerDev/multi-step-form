@@ -80,11 +80,6 @@ body .header .btn-group button {
   background-color: transparent;
   font-family: "Ubuntu-Bold";
 }
-body .header .btn-group .selected {
-  background-color: hsl(206, 94%, 87%);
-  color: black;
-  border: none;
-}
 body .personal-info {
   line-height: 1.7;
 }
@@ -95,7 +90,7 @@ body .personal-info .personal-info__form fieldset {
   font-family: "Ubuntu-Medium", sans-serif;
 }
 body .personal-info .personal-info__form fieldset input {
-  font-family: "Ubuntu-bold";
+  font-family: "Ubuntu-Bold";
   padding: 12px;
   border: hsl(229, 24%, 87%) 1px solid;
   border-radius: 4px;
@@ -113,14 +108,28 @@ body .billing .billing__button-group {
   flex-direction: column;
   gap: 10px;
 }
-body .billing .billing__button-group .billing-selection-btn {
+body .billing .billing-selection-btn {
   height: 65px;
   width: 95%;
   background-color: transparent;
   border: 1px solid hsl(229, 24%, 87%);
   border-radius: 10px;
+  display: flex;
+  align-items: center;
 }
-body .billing .billing__button-group .billing__switch {
+body .billing .billing-selection-btn.selected {
+  border: 2px solid purple;
+}
+body .billing img {
+  margin: 10px;
+}
+body .billing .text {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  margin-top: 10px;
+}
+body .billing .billing__switch {
   display: flex;
   gap: 15px;
   background-color: hsl(229, 24%, 87%);
@@ -131,14 +140,14 @@ body .billing .billing__button-group .billing__switch {
   border-radius: 12px;
   font-size: 0.7rem;
 }
-body .billing .billing__button-group .billing__switch .billing-selection-switch {
+body .billing .billing__switch .billing-selection-switch {
   height: 20px;
   width: 35px;
   background-color: hsl(213, 96%, 18%);
   border: none;
   border-radius: 12px;
 }
-body .billing .billing__button-group .billing__switch .billing-selection-switch .switch-state-indicator {
+body .billing .billing__switch .billing-selection-switch .switch-state-indicator {
   width: 12px;
   height: 12px;
   margin-left: 3px;
@@ -146,7 +155,8 @@ body .billing .billing__button-group .billing__switch .billing-selection-switch 
   border-radius: 50%;
   background-color: white;
 }
-body .card {
+
+.card {
   width: 90vw;
   border-radius: 10px;
   background-color: white;
@@ -155,7 +165,8 @@ body .card {
   padding: 20px;
   padding-top: 30px;
 }
-body .footer {
+
+.footer {
   height: 10vh;
   width: 100%;
   background-color: white;
@@ -164,7 +175,7 @@ body .footer {
   align-items: flex-end;
   padding: 5px;
 }
-body .footer .next-step-btn {
+.footer .next-step-btn {
   width: 110px;
   font-size: 0.7rem;
   margin-right: 10px;

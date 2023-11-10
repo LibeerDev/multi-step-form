@@ -43,3 +43,16 @@ function nextStep() {
     }
 
 };
+
+function selectButton(buttonId) {
+    // Remove the "selected" class from all buttons
+    const buttons = document.querySelectorAll('.billing-selection-btn');
+    buttons.forEach(button => {
+      button.classList.remove('selected');
+    });
+
+    // Add the "selected" class to the clicked button
+    const selectedButton = document.getElementById(buttonId);
+    selectedButton.classList.add('selected');
+
+  }
